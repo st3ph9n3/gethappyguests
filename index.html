@@ -5,59 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Happy Guests</title>
     <style>
+        /* Import Noto Font */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Noto Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #fdd162;
             color: #333;
             text-align: center;
         }
+
         header {
-            background-color: #28a745;
+            position: relative;
+            height: 100vh;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+                              url('https://ew.com/thmb/3y4X-GsCN-DonjkWY0W5DmpJ07g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/DF_01687F-5147f328709141c9aff9b0bea6274f0e.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 20px;
         }
-        h1 {
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fdd162;
+        }
+
+        .logo span {
+            color: #751cf5;
+        }
+
+        .headline {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .headline h1 {
+            font-size: 3em;
             margin: 0;
-            font-size: 2.5em;
+            color: #fdd162;
         }
-        main {
-            padding: 20px;
+
+        .headline p {
+            font-size: 1.2em;
+            margin: 10px 0 20px;
+            color: #ca9d55;
         }
-        button {
-            background-color: #28a745;
+
+        .cta-button {
+            background-color: #f86ac8;
             color: white;
             border: none;
             padding: 15px 30px;
             font-size: 1em;
+            font-weight: bold;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
+            text-transform: uppercase;
         }
-        button:hover {
-            background-color: #218838;
+
+        .cta-button:hover {
+            background-color: #751cf5;
         }
+
         footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #ca9d55;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Seats that click</h1>
+        <!-- Logo -->
+        <div class="logo">Get <span>Happy Guests</span></div>
+
+        <!-- Headline and Call to Action -->
+        <div class="headline">
+            <h1>Say Goodbye to Seating Stress</h1>
+            <p>Create the perfect seating plan in minutes</p>
+            <button class="cta-button">Join the Waitlist</button>
+        </div>
     </header>
-    <main>
-        <p>Effortless seating plans, happy guests, unforgettable moments.</p>
-        <button>Join the Waitlist</button>
-    </main>
+
     <footer>
-        <p>&copy; 2024 Get Happy Guests</p>
+        © 2024 Get Happy Guests. All rights reserved.
     </footer>
 </body>
 </html>
