@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Happy Guests</title>
+    <title>Happy Guests</title>
     <style>
         /* Import Noto Font */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
@@ -21,11 +21,17 @@
         header {
             position: relative;
             height: 100vh;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
                               url('https://ew.com/thmb/3y4X-GsCN-DonjkWY0W5DmpJ07g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/DF_01687F-5147f328709141c9aff9b0bea6274f0e.jpg');
             background-size: cover;
             background-position: center;
             color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
         }
 
         .logo {
@@ -37,28 +43,16 @@
             color: #fdd162;
         }
 
-        .logo span {
-            color: #751cf5;
-        }
-
-        .headline {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
         .headline h1 {
             font-size: 3em;
             margin: 0;
-            color: #fdd162;
+            color: #ffffff;
         }
 
         .headline p {
             font-size: 1.2em;
             margin: 10px 0 20px;
-            color: #ca9d55;
+            color: #fdd162;
         }
 
         .cta-button {
@@ -71,34 +65,89 @@
             border-radius: 5px;
             cursor: pointer;
             text-transform: uppercase;
+            margin-bottom: 80px;
+            margin-top: 10px;
         }
 
         .cta-button:hover {
             background-color: #751cf5;
         }
 
+        .steps {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            max-width: 90%;
+        }
+
+        .step {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px; /* Increased width for readability */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .step h3 {
+            color: #751cf5;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .step p {
+            color: #333;
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
         footer {
             margin-top: 20px;
+            padding: 20px 0;
             font-size: 0.9em;
-            color: #ca9d55;
+            background-color: #ca9d55;
+            color: white;
         }
     </style>
 </head>
 <body>
     <header>
         <!-- Logo -->
-        <div class="logo">Get <span>Happy Guests</span></div>
+        <div class="logo">Happy Guests</div>
 
         <!-- Headline and Call to Action -->
         <div class="headline">
-            <h1>Say Goodbye to Seating Stress</h1>
-            <p>Create the perfect seating plan in minutes</p>
+            <h1>Seating plans that click</h1>
+            <p>Happy guests, happy wedding. Create your perfect wedding seating plan in minutes.</p>
             <button class="cta-button">Join the Waitlist</button>
+        </div>
+
+        <!-- 3-Step Process Section -->
+        <div class="steps">
+            <!-- Step 1 -->
+            <div class="step">
+                <h3>1. Choose your experience</h3>
+                <p>Pick the vibe: from traditional to meet-new-friends.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="step">
+                <h3>2. Upload your guest list</h3>
+                <p>Simply upload your list, and let us handle the rest.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="step">
+                <h3>3. Let the AI work its magic</h3>
+                <p>Our AI creates the perfect seating plan.</p>
+            </div>
         </div>
     </header>
 
     <footer>
-        © 2024 Get Happy Guests. All rights reserved.
+        © 2025 Get Happy Guests. All rights reserved.
     </footer>
 </body>
 </html>
