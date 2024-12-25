@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Guests</title>
     <style>
-        /* Import Noto Font */
+        /* Import Google Font */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
         /* General Styles */
@@ -15,13 +15,13 @@
             padding: 0;
             background-color: #fdd162;
             color: #333;
-            text-align: center;
+            overflow-x: hidden;
         }
 
         header {
             position: relative;
             height: 100vh;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
                               url('https://ew.com/thmb/3y4X-GsCN-DonjkWY0W5DmpJ07g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/DF_01687F-5147f328709141c9aff9b0bea6274f0e.jpg');
             background-size: cover;
             background-position: center;
@@ -31,7 +31,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            overflow: hidden;
+            padding: 20px;
         }
 
         .logo {
@@ -44,15 +44,17 @@
         }
 
         .headline h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin: 0;
-            color: #ffffff;
+        }
+
+        .headline h1 span {
+            color: #f86ac8;
         }
 
         .headline p {
             font-size: 1.2em;
-            margin: 10px 0 20px;
-            color: #fdd162;
+            margin: 10px 0;
         }
 
         .cta-button {
@@ -65,52 +67,128 @@
             border-radius: 5px;
             cursor: pointer;
             text-transform: uppercase;
-            margin-bottom: 80px;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         .cta-button:hover {
             background-color: #751cf5;
         }
 
-        .steps {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            max-width: 90%;
-        }
-
-        .step {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 10px;
-            padding: 20px;
-            width: 280px; /* Increased width for readability */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        .how-it-works {
+            padding: 40px 20px;
+            background-color: white;
             text-align: center;
         }
 
-        .step h3 {
+        .how-it-works h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
             color: #751cf5;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .step {
+            background-color: #fdd162;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .step h3 {
             font-size: 1.2em;
+            color: #751cf5;
             margin-bottom: 10px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .step p {
-            color: #333;
             font-size: 1em;
-            margin-top: 5px;
+            color: #333;
+        }
+
+        #tweets {
+            padding: 40px 20px;
+            background-color: #fdd162;
+            text-align: center;
+        }
+
+        #tweets h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #751cf5;
+        }
+
+        .tweet-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .tweet {
+            flex: 1 1 300px;
+            max-width: 400px;
+            min-width: 300px;
         }
 
         footer {
-            margin-top: 20px;
+            margin-top: 40px;
             padding: 20px 0;
             font-size: 0.9em;
             background-color: #ca9d55;
             color: white;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 100vh;
+            }
+
+            .headline h1 {
+                font-size: 2em;
+            }
+
+            .headline p {
+                font-size: 1em;
+            }
+
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .steps {
+                gap: 10px;
+            }
+
+            .step {
+                max-width: 100%;
+                text-align: left;
+            }
+
+            #tweets .tweet-container {
+                flex-wrap: nowrap;
+                overflow-x: scroll;
+                padding: 20px;
+            }
+
+            .tweet {
+                min-width: 300px;
+                max-width: none;
+            }
         }
     </style>
 </head>
@@ -119,35 +197,69 @@
         <!-- Logo -->
         <div class="logo">Happy Guests</div>
 
-        <!-- Headline and Call to Action -->
+        <!-- Headline -->
         <div class="headline">
-            <h1>Seating plans that click</h1>
+            <h1>Wedding Seating Plan <span>In Minutes</span></h1>
             <p>Happy guests, happy wedding. Create your perfect wedding seating plan in minutes.</p>
             <button class="cta-button">Join the Waitlist</button>
         </div>
+    </header>
 
-        <!-- 3-Step Process Section -->
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
         <div class="steps">
-            <!-- Step 1 -->
             <div class="step">
                 <h3>1. Choose your experience</h3>
                 <p>Pick the vibe: from traditional to meet-new-friends.</p>
             </div>
-            <!-- Step 2 -->
             <div class="step">
                 <h3>2. Upload your guest list</h3>
                 <p>Simply upload your list, and let us handle the rest.</p>
             </div>
-            <!-- Step 3 -->
             <div class="step">
                 <h3>3. Let the AI work its magic</h3>
                 <p>Our AI creates the perfect seating plan.</p>
             </div>
         </div>
-    </header>
+    </section>
 
+    <!-- Tweets Section -->
+    <section id="tweets">
+        <h2>Why We've Built This</h2>
+        <div class="tweet-container">
+            <!-- Tweets will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        © 2025 Get Happy Guests. All rights reserved.
+        <p>© 2025 Happy Guests. All rights reserved.</p>
+        <p>An Aka Pacha venture.</p>
     </footer>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        const allTweets = [
+            '<blockquote class="twitter-tweet"><p>Worst part of wedding planning is hands down the seating chart. Omg</p>— Dani Romanoff (@DaniKeyarrow) <a href="https://twitter.com/DaniKeyarrow/status/1848043675651330546">October 20, 2024</a></blockquote>',
+            '<blockquote class="twitter-tweet"><p>One side quest when planning wedding guest list / seating chart is to cause at least one new relationship to form</p>— Astro (@anonynaut) <a href="https://twitter.com/anonynaut/status/1849126406720020651">October 23, 2024</a></blockquote>',
+            '<blockquote class="twitter-tweet"><p>The seating chart portion of a wedding is probably top 5 most stressful and annoying things</p>— Teena Thach (@teena_thach) <a href="https://twitter.com/teena_thach/status/1800699697386152155">June 12, 2024</a></blockquote>',
+            '<blockquote class="twitter-tweet"><p>A wedding of 100 guests at 10 tables has 65 trillion seating possibilities.</p>— Quite Interesting (@qikipedia) <a href="https://twitter.com/qikipedia/status/927505861462843392">November 6, 2017</a></blockquote>',
+            '<blockquote class="twitter-tweet"><p>lol doing the seating chart for my wedding gave me the biggest migraine of my LIFE</p>— Teena Thach (@teena_thach) <a href="https://twitter.com/teena_thach/status/1795494094971834856">May 28, 2024</a></blockquote>'
+        ];
+
+        const tweetContainer = document.querySelector('.tweet-container');
+        const isMobile = window.innerWidth <= 768;
+
+        const selectedTweets = isMobile
+            ? allTweets.sort(() => 0.5 - Math.random()).slice(0, 3)
+            : allTweets;
+
+        selectedTweets.forEach(tweet => {
+            tweetContainer.innerHTML += tweet;
+        });
+
+        twttr.widgets.load();
+    </script>
 </body>
 </html>
